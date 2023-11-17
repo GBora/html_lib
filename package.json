@@ -1,0 +1,21 @@
+{
+  "name": "html_lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ]
+}
