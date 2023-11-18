@@ -1,4 +1,3 @@
 export interface ITagAttribute {
-    name: string;
-    value: string;
+    [key: string]: string
 }
