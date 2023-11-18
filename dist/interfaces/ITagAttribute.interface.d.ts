@@ -1,5 +1,4 @@
 export interface ITagAttribute {
-    name: string;
-    value: string;
+    [key: string]: string;
 }
 //# sourceMappingURL=ITagAttribute.interface.d.ts.map

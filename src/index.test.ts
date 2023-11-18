@@ -12,11 +12,13 @@ describe('div function', () => {
   });
 
   it('should be able to wrap contents in div tag and apply an class attribute' , () => {
-    expect(div('foo',{name: "class", value:"bar"})).to.equal('<div class="bar">foo</div>');
+    const result = div('foo',{"class": "bar"});
+    expect(result).to.equal('<div class="bar">foo</div>');
   });
 
   it('should be able to wrap contents in div tag and apply an class attribute and an id' , () => {
-    expect(div('foo',[{name: "class", value:"bar"}, {name: "id", value:"foobar"}])).to.equal('<div class="bar" id="foobar">foo</div>');
+    const result = div('foo', {"class": "bar", "id": "foobar"});
+    expect(result).to.equal('<div class="bar" id="foobar">foo</div>');
   });
 
 });

@@ -31,9 +31,11 @@ describe('div function', () => {
         expect((0, index_1.div)('foo')).to.equal('<div>foo</div>');
     });
     it('should be able to wrap contents in div tag and apply an class attribute', () => {
-        expect((0, index_1.div)('foo', { name: "class", value: "bar" })).to.equal('<div class="bar">foo</div>');
+        const result = (0, index_1.div)('foo', { "class": "bar" });
+        expect(result).to.equal('<div class="bar">foo</div>');
     });
     it('should be able to wrap contents in div tag and apply an class attribute and an id', () => {
-        expect((0, index_1.div)('foo', [{ name: "class", value: "bar" }, { name: "id", value: "foobar" }])).to.equal('<div class="bar" id="foobar">foo</div>');
+        const result = (0, index_1.div)('foo', { "class": "bar", "id": "foobar" });
+        expect(result).to.equal('<div class="bar" id="foobar">foo</div>');
     });
 });
