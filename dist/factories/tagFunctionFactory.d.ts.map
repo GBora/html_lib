@@ -1,1 +1,1 @@
-{"version":3,"file":"tagFunctionFactory.d.ts","sourceRoot":"","sources":["../../src/factories/tagFunctionFactory.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,kBAAkB,QAAS,MAAM,gBACxB,MAAM,UAAU,GAAG,EAAE,WAG1C,CAAA"}
+{"version":3,"file":"tagFunctionFactory.d.ts","sourceRoot":"","sources":["../../src/factories/tagFunctionFactory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,uCAAuC,CAAA;AAIrE,eAAO,MAAM,kBAAkB,QAAS,MAAM,gBACxB,MAAM,eAAe,aAAa,EAAE,GAAG,aAAa,WAazE,CAAA"}
