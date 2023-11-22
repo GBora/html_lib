@@ -21,4 +21,12 @@ describe('div function', () => {
     expect(result).to.equal('<div class="bar" id="foobar">foo</div>');
   });
 
+  it('should be able to take in multiple child elements' , () => {
+    const inputs = ["one", "two", "three"];
+    const children = inputs.map(el => div(el, {"class": "child"}));
+    const result = div(children, {"class": "parent"});
+    expect(result).to.equal('<div class="parent"> <div class="child">one</div> <div class="child">two</div> <div class="child">three</div></div>');
+  });
+
 });
+

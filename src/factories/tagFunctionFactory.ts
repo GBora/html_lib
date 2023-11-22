@@ -3,9 +3,16 @@ import { ITagAttribute } from "../interfaces/ITagAttribute.interface"
 // TODO give up explicit type
 // TODO make it chaine-able
 export const tagFunctionFactory = (tag: string) => {
-    return (children: string, attributes?: ITagAttribute) => {
-        let paramString = '';
+    return (children: string | string [], attributes?: ITagAttribute) => {
+        let childrenToRender = ''
+        if (Array.isArray(children)) {
+            childrenToRender = children.reduce((accumulator, element) => accumulator + ' ' + element, '')
+        } else {
+            childrenToRender = children
+        }
 
+        let paramString = '';
+        
         if (attributes) {
             const keys = Object.keys(attributes);
             if (keys.length === 1) {
@@ -25,6 +32,6 @@ export const tagFunctionFactory = (tag: string) => {
             // }
         }
 
-        return `<${tag}${paramString}>${children}</${tag}>`
+        return `<${tag}${paramString}>${childrenToRender}</${tag}>`
     } 
 }
