@@ -38,4 +38,14 @@ describe('div function', () => {
         const result = (0, index_1.div)('foo', { "class": "bar", "id": "foobar" });
         expect(result).to.equal('<div class="bar" id="foobar">foo</div>');
     });
+    it('should be able to take in multiple child elements', () => {
+        const inputs = ["one", "two", "three"];
+        const children = inputs.map(el => (0, index_1.div)(el, { "class": "child" }));
+        const result = (0, index_1.div)(children, { "class": "parent" });
+        expect(result).to.equal('<div class="parent"> <div class="child">one</div> <div class="child">two</div> <div class="child">three</div></div>');
+    });
+    it('should if given an empty argument return an empty div', () => {
+        const result = (0, index_1.div)();
+        expect(result).to.equal('<div></div>');
+    });
 });

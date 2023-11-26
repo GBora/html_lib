@@ -1,3 +1,4 @@
-import { ITagAttribute } from "../interfaces/ITagAttribute.interface";
-export declare const tagFunctionFactory: (tag: string) => (children: string, attributes?: ITagAttribute) => string;
+export declare const tagFunctionFactory: (tag: string) => (children?: string | string[], attributes?: {
+    [key: string]: string;
+} | undefined) => string;
 //# sourceMappingURL=tagFunctionFactory.d.ts.map

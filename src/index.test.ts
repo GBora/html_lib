@@ -28,5 +28,10 @@ describe('div function', () => {
     expect(result).to.equal('<div class="parent"> <div class="child">one</div> <div class="child">two</div> <div class="child">three</div></div>');
   });
 
+  it('should if given an empty argument return an empty div' , () => {
+    const result = div();
+    expect(result).to.equal('<div></div>');
+  });
+
 });
 
