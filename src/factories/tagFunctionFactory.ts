@@ -1,5 +1,5 @@
 // TODO make the functions chain-able
-export const tagFunctionFactory = (tag: string) => {
+export const tagFunctionFactory = (tag: string, selfClosing?: boolean) => {
     return (children?: string | string [], attributes?: {
         [key: string]: string
     }) => {
@@ -27,6 +27,10 @@ export const tagFunctionFactory = (tag: string) => {
             if (keys.length > 1) {
                 paramString = keys.reduce((accumulator, key) => accumulator + ` ${key}="${attributes[key]}"`, '');
             }
+        }
+
+        if (selfClosing && selfClosing === true) {
+            return `<${tag}${paramString} ${childrenToRender} />`
         }
 
         return `<${tag}${paramString}>${childrenToRender}</${tag}>`
