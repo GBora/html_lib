@@ -1,6 +1,6 @@
 {
   "name": "htma",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "HTML Alchemy is a small Javascript (both node and browsers) library intended to help with building HTML strings.",
   "main": "dist/index.js",
   "scripts": {

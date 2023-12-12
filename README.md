@@ -1,4 +1,4 @@
-# HTML Alchemy
+# ![Icon](./img//icon.png "Html Alchemy") HTML Alchemy
 
 HTML Alchemy is a small Javascript (both node and browsers) library intended to help with building HTML strings.
 

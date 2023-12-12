@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tagFunctionFactory = void 0;
 // TODO make the functions chain-able
-const tagFunctionFactory = (tag) => {
+const tagFunctionFactory = (tag, selfClosing) => {
     return (children, attributes) => {
         let childrenToRender = '';
         if (Array.isArray(children)) {
@@ -27,6 +27,9 @@ const tagFunctionFactory = (tag) => {
             if (keys.length > 1) {
                 paramString = keys.reduce((accumulator, key) => accumulator + ` ${key}="${attributes[key]}"`, '');
             }
+        }
+        if (selfClosing && selfClosing === true) {
+            return `<${tag}${paramString} ${childrenToRender} />`;
         }
         return `<${tag}${paramString}>${childrenToRender}</${tag}>`;
     };
